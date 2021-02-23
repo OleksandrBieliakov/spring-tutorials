@@ -40,6 +40,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -48,6 +49,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- tag::frontend-maven-plugin[] -->
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.11.2</version>
+				<configuration>
+					<nodeVersion>v14.16.0</nodeVersion>
+				</configuration>
+			</plugin>
+			<!-- end::frontend-maven-plugin[] -->
 		</plugins>
 	</build>
 
