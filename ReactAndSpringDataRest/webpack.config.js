@@ -9,6 +9,11 @@ module.exports = {
         path: __dirname,
         filename: './src/main/resources/static/built/bundle.js'
     },
+    resolve: {
+        alias: {
+            'stompjs': __dirname + '/node_modules' + '/stompjs/lib/stomp.js',
+        }
+    },
     module: {
         rules: [
             {
