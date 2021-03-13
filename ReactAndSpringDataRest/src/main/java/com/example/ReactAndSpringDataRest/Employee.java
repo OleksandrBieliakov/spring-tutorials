@@ -20,7 +20,7 @@ public class Employee {
     private String lastName;
     private String description;
 
-    private @ManyToOne Manager manager;
+    private @ManyToOne @JoinColumn(foreignKey = @ForeignKey(name = "fk_employee_manager")) Manager manager;
 
     private @Version @JsonIgnore Long version;
 
